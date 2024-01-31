@@ -3,11 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Improved line height for better readability */
 }
 
 #banner {
     object-fit: cover;
     width: 100%;
+    max-height: 300px; /* Adjusted maximum height for better responsiveness */
 }
 
 /* Header and Navigation styles */
@@ -15,6 +17,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
+    text-align: center; /* Center-align text in the header */
 }
 
 nav {
@@ -30,10 +33,14 @@ nav {
 ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+    padding: 0;
+    margin: 0;
 }
 
 li {
     margin-right: 20px;
+    margin-bottom: 10px; /* Add bottom margin to create space between navigation items */
 }
 
 a {
@@ -83,7 +90,7 @@ h2 {
 }
 
 .container {
-    width: 48%;
+    width: 100%; /* Adjusted width for better responsiveness */
     margin-bottom: 20px;
 }
 
@@ -145,7 +152,7 @@ h2 {
 
 .contact-form input {
     width: 100%;
-    padding: 8px;
+    padding: 10px; /* Increased padding for better touch input */
     margin-bottom: 10px;
     box-sizing: border-box;
 }
@@ -153,7 +160,7 @@ h2 {
 .contact-form button {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Increased padding for better touch input */
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -216,7 +223,8 @@ footer {
     }
 
     #banner {
-        height: 150px;
+        height: auto; /* Allow banner height to adjust based on content */
+        max-height: none; /* Reset max-height for smaller screens */
     }
 
     #about,
@@ -225,11 +233,20 @@ footer {
     #resume,
     #contact {
         padding: 10px;
+        overflow-x: hidden;
     }
 
     .timeline,
     .container {
         width: 100%;
+    }
+
+    ul {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+    }
+
+    li {
+        margin-right: 0; /* Remove right margin on small screens */
     }
 
     .container h3,
@@ -241,8 +258,8 @@ footer {
         font-size: 14px;
     }
 
-    .contact-form input {
-        width: 100%;
+    .contact-form button {
+        width: 100%; /* Full width for better mobile experience */
     }
 }
 
@@ -252,7 +269,8 @@ footer {
     }
 
     #banner {
-        height: 200px;
+        height: auto;
+        max-height: none;
     }
 
     .timeline,
@@ -273,6 +291,7 @@ footer {
         width: 50%;
     }
 }
+
 @media only screen and (min-device-width: 768px) and
     (max-device-width: 1024px) {
     body {
@@ -280,7 +299,8 @@ footer {
     }
 
     #banner {
-        height: 200px;
+        height: auto;
+        max-height: none;
     }
 
     .timeline,
